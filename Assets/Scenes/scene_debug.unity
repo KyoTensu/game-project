@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 157923830}
   - component: {fileID: 157923829}
   - component: {fileID: 157923834}
+  - component: {fileID: 157923835}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -350,14 +351,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6d310a2eedaa943af42a92cc075223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 40
-  turnSpeed: 40
+  walkSpeed: 10
+  turnSpeed: 150
   inputFront: z
   inputBack: s
   inputLeft: q
   inputRight: d
   inputRun: a
   inputLow: e
+--- !u!114 &157923835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157923828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3db7fa236524ec4db3e9dd53d9c7f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube: {fileID: 1541059495}
+  inputPush: j
 --- !u!1 &261947892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,7 +1811,7 @@ GameObject:
   - component: {fileID: 1541059494}
   - component: {fileID: 1541059493}
   - component: {fileID: 1541059492}
-  - component: {fileID: 1541059491}
+  - component: {fileID: 1541059495}
   m_Layer: 0
   m_Name: Bloc_movable
   m_TagString: Untagged
@@ -1819,22 +1834,6 @@ Transform:
   m_Father: {fileID: 781896288}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1541059491
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541059489}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &1541059492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1898,6 +1897,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541059489}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1541059495
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541059489}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1610904879
 GameObject:
   m_ObjectHideFlags: 0
