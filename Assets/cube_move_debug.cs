@@ -15,7 +15,7 @@ public class cube_move_debug : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision col) // Recuperer une collision
+    void OnCollisionStay(Collision col) // Recuperer une collision
     {
         if (col.gameObject.name == "Bloc_movable" && Input.GetKey(inputPush))
         {

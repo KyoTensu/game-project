@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 157923829}
   - component: {fileID: 157923834}
   - component: {fileID: 157923835}
+  - component: {fileID: 157923836}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -373,6 +374,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 1541059495}
   inputPush: j
+--- !u!114 &157923836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157923828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae472f2951a0f44595a571a18b30772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputmont: k
 --- !u!1 &261947892
 GameObject:
   m_ObjectHideFlags: 0
