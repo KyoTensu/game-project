@@ -14,15 +14,16 @@ public class echelle_level1 : MonoBehaviour
     public string inputMont = "j";
 
 
-    void OnCollisionStay(Collision col) // Recuperer une collision
+    void OnTriggerStay(Collider col) // Recuperer une collision
     {
-        if (col.gameObject.name == "e" && Input.GetKey(inputMont))
+        if (col.gameObject.name == "echelle_trigger" && Input.GetKey(inputMont))
         {
-            transform.position = transform.position + new Vector3(0, 2, 0); // la valeur 5 (dans l'axe y donc) est la valeur de notre montée
-            print("ça marche");
+            transform.position = transform.position + new Vector3(0, 0.5f, 0); // la valeur 5 (dans l'axe y donc) est la valeur de notre montée
+           
 
         }
     }
+
     // Update is called once per frame
     void Update()
     {
