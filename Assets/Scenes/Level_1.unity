@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -350,9 +350,9 @@ Transform:
   - {fileID: 670986286}
   - {fileID: 1530820198}
   - {fileID: 1339424796}
-  - {fileID: 1635937227}
-  - {fileID: 851853882}
   - {fileID: 737238100}
+  - {fileID: 851853882}
+  - {fileID: 1635937227}
   - {fileID: 1621947291}
   - {fileID: 698241991}
   - {fileID: 1179567631}
@@ -4990,6 +4990,7 @@ GameObject:
   - component: {fileID: 249043347}
   - component: {fileID: 249043349}
   - component: {fileID: 249043348}
+  - component: {fileID: 249043350}
   m_Layer: 0
   m_Name: SteelLadder B (2)
   m_TagString: Untagged
@@ -5068,6 +5069,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249043346}
   m_Mesh: {fileID: 4300000, guid: b544a1ccfec9a2543b3e4a999c578497, type: 3}
+--- !u!65 &249043350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249043346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10000008, y: 2, z: 1.0000005}
+  m_Center: {x: -0.05000089, y: 1.0000012, z: -0.0000005066395}
 --- !u!1 &250339235
 GameObject:
   m_ObjectHideFlags: 0
@@ -35210,7 +35224,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 38388642}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!64 &737238101
 MeshCollider:
@@ -38159,6 +38173,9 @@ GameObject:
   - component: {fileID: 802938000}
   - component: {fileID: 802937999}
   - component: {fileID: 802937998}
+  - component: {fileID: 802938003}
+  - component: {fileID: 802938002}
+  - component: {fileID: 802938004}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -38245,6 +38262,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &802938002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802937997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6e9693dc4ddcf47b1dfe82f29912be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputMont: j
+--- !u!114 &802938003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802937997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f6d310a2eedaa943af42a92cc075223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 10
+  turnSpeed: 100
+  inputFront: z
+  inputBack: s
+  inputLeft: q
+  inputRight: d
+  inputRun: a
+  inputLow: e
+--- !u!54 &802938004
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802937997}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1001 &806221549
 PrefabInstance:
   m_ObjectHideFlags: 0
