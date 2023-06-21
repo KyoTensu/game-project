@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class levier_level1 : MonoBehaviour
 {
+    public Vector3 position_vitre;
     //Touche pour activer le levier
     public string inputLev = "j";
 
@@ -14,7 +15,7 @@ public class levier_level1 : MonoBehaviour
     public Transform lev4;
     public BoxCollider trigger_carte;
 
-    // variable récupération position
+    // variable rï¿½cupï¿½ration position
     public bool A1 = false;
     public bool A2 = false;
     public bool A3 = false;
@@ -119,6 +120,7 @@ public class levier_level1 : MonoBehaviour
         {
             if (B4 == 1 && B1 == 2 && B3 == 3 && B2 == 4)
             {
+                GameObject.Find("Vitre_Boite_carte").transform.position = position_vitre + Vector3.down *10;
                 trigger_carte.enabled = true;
             } else
                 {
