@@ -10,6 +10,7 @@ public class recuperation_objet : MonoBehaviour
     public GameObject cle;
     public Transform trigger;
     public Transform balise;
+    public BoxCollider lum;
 
     public int open;
     public int open1;
@@ -51,6 +52,10 @@ public class recuperation_objet : MonoBehaviour
             {
                 trigger.transform.position = balise.transform.position;
             }
+        }
+        if (open == 100)
+        {
+            lum.enabled = true;
         }
     }
     

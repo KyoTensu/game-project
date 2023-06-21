@@ -10,8 +10,12 @@ public class fermeture : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other) {
-        Application.Quit();
+    void OnTriggerEnter(Collider col) {
+        if (col.gameObject.name == "Player")
+        {
+            Application.Quit();
+            print("ça marche");
+        }
     }
     // Update is called once per frame
     void Update()

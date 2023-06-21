@@ -5,7 +5,9 @@ using UnityEngine;
 public class allumage_lampadaire : MonoBehaviour
 {
     public string inputFus = "j";
-    //public Light lumiere_lampadaire;
+    public Light lumiere_lampadaire;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,9 @@ public class allumage_lampadaire : MonoBehaviour
         {
 
 
-            GetComponent<Light>().intensity = 3;
-            Debug.Log("yes");
-
+            lumiere_lampadaire.intensity = 3.0f;
+            print("ça marche");
+            
 
         }
     }
