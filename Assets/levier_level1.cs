@@ -12,6 +12,7 @@ public class levier_level1 : MonoBehaviour
     public Transform lev2;
     public Transform lev3;
     public Transform lev4;
+    public BoxCollider trigger_carte;
 
     // variable récupération position
     public bool A1 = false;
@@ -25,6 +26,7 @@ public class levier_level1 : MonoBehaviour
     public int B3 = 0;
     public int B4 = 0;
     public int i = 1;
+    
 
     void Start()
     {
@@ -117,7 +119,7 @@ public class levier_level1 : MonoBehaviour
         {
             if (B4 == 1 && B1 == 2 && B3 == 3 && B2 == 4)
             {
-                i = 8;
+                trigger_carte.enabled = true;
             } else
                 {
                      B1 = 0;
